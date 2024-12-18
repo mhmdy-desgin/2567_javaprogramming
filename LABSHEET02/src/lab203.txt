@@ -1,0 +1,41 @@
+import javax.swing.*;
+import java.text.*;
+
+public class Lab203 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		DecimalFormat frm = new DecimalFormat(".0");
+		double inputWeight = Double.parseDouble(JOptionPane.showInputDialog(null, "Input Weight"));
+		double inputHeight = Double.parseDouble(JOptionPane.showInputDialog(null, "Input Height"));
+		inputHeight = inputHeight / 100;
+		double BMI = inputWeight / (inputHeight * inputHeight);
+		
+		String mg;
+		
+		if ( BMI >= 30.0 ) {
+			mg = "Obesity";
+		}
+		else if ( BMI <= 29.9 && BMI >= 25.0 ) {
+			mg = "Over weight";
+		}
+		else if ( BMI <= 24.9 && BMI >= 18.5 ) {
+			mg = "Normal weight";
+		}
+		else {
+			mg = "Under weight";
+		}
+		
+		String massage = "BMI = " + frm.format(BMI) + 
+				"\nYou're " + mg;
+		
+		JOptionPane.showMessageDialog(null, massage
+				, "BMI" 
+				, JOptionPane.WARNING_MESSAGE);
+		
+		//System.out.println(BMI);
+		//System.out.print("You're " + mg);
+	}
+
+}
