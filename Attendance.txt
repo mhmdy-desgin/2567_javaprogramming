@@ -1,4 +1,4 @@
 studentID:2413110459
 studentName:Tanakorn Wangjan
-Topic:CH5 - Array
-Date:12/25/2024
+Topic:Encapsulation Concept
+Date:1/22/2024
