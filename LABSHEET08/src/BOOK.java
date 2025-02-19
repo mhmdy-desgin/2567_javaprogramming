@@ -1,37 +1,53 @@
 
-public class BOOK {
+public class Book {
 	private String title;
-	private Author author;
+	private Author auther;
 	private int page;
 	
-	//Constructor Method 
-	BOOK(String title, Author author, int page){
-		this.title=title;
-		this.author= author;
-		this.page=page;
+	Book() {
+		//this(null, null, 0);
+		this.title = null;
+		this.auther = null;
+		this.page = 0;
 	}
 	
-	BOOK(String title, Author author){
+	Book(String title, Author auther, int page) {
 		this.title = title;
-		this.author=author;
-		this.page=0;
+		this.auther = auther;
+		this.page = page;
 	}
-	BOOK(){
-		/*this.title=null;
-		this.author=null;
-		this.page=0;*/
-		this(null,null,0);
-		
+	
+	Book(String title, Author auther) {
+		/*
+		this.title = title;
+		this.auther = auther;
+		this.page = 0;
+		*/
+		this(title,auther,0);
 	}
+	
 	public String getTitle() {
 		return title;
 	}
+	
 	public Author getAuthor() {
-		return author;
+		return auther;
 	}
-	public void setAuthor(Author) {
-		
+	
+	public int getPage() {
+		return page;
 	}
+	
+	public void setPage(int page) {
+		this.page = page;
+	}
+	
+	public String toString() {
+		return getTitle() + " has " + getPage() + " page write by "
+				+ getAuthor();
+	}
+	
+	
 	
 	
 	

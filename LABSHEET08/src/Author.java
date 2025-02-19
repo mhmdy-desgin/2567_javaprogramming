@@ -1,32 +1,31 @@
 
 public class Author {
+
 	private String name;
 	private String email;
-	//Default Constructor
-	Author(){
+	
+	Author(String name, String email) {
+		this.name = name;
+		this.email = email;
+	}
+	
+	Author() {
 		this(null,null);
 	}
-	Author(String name,String email){
-		this.name=name;
-		this.email=email;
-	}
+	
 	public String getName() {
-		return this.name;
+		return name;
 	}
-	public void setEmail(String email) {
-		this.email=email;
+	
+	public void setName(String email) {
+		this.email = email;
 	}
+	
 	public String getEmail() {
-		return this.email;
+		return email;
 	}
+	
 	public String toString() {
-		return getName()+ " ("+ getEmail() + ")";
+		return getName() + " (" + getEmail() + ")";
 	}
-	
-	
-	
-	
-	
-	
-	
 }
